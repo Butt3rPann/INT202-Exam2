@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+</head>
+<body class="m-5">
+    <h1>Employee Detail</h1><hr>
+    <div class="mx-5">
+        Employee Number : <span th:text="${emp.id}"/><br>
+        Last Name : <span th:text="${emp.lastName}"/><br>
+        First Name : <span th:text="${emp.firstName}"/><br>
+        Extension : <span th:text="${emp.extension}"/><br>
+        Email : <span th:text="${emp.email}"/><br>
+        Office Code : <span th:text="${emp.officeCode.officeCode}"/><br>
+        Report To : <span th:text="${emp.reportsTo != null ? emp.reportsTo.id : ''}"/><br>
+        Job Title : <span th:text="${emp.jobTitle}"/>
+    </div>
+    <h3 th:text="${message}"/>
+    <a href="/employees/employee-list"><button>Back</button></a>
+</body>
+</html>
